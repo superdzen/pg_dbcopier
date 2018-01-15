@@ -1,8 +1,8 @@
 # pg_dbcopier
 
 Pg_dbcopier is a python script that can make a stand-alone copy of the remote PostgreSQL server.
-> Can be started automatically.
-There is a simplified version for Linux shell - pg_dbcopier.sh
+
+Can be started automatically. There is a simplified version for Linux shell - pg_dbcopier.sh
 
 ##### Sequencing:
 1. Start script
