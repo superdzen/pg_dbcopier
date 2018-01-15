@@ -49,7 +49,7 @@ db-src:*:*:replication:replication
 [admin@db-dst ~]$
 ```
 
-##### Run help:
+##### Show help:
 ```
 [admin@db-dst ~]$ ./pg_dbcopier.py -h
 
