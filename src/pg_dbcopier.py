@@ -20,8 +20,8 @@ logger = None
 
 
 def arg_parser():
-    """
-    Parsing arguments
+    """Parsing arguments
+
     :return: returns nothing
     """
     parser = argparse.ArgumentParser(add_help=False, formatter_class=argparse.RawTextHelpFormatter)
@@ -77,8 +77,8 @@ By default = """ + SCRIPT_LOG_FILE)
 
 
 def init_logger(args):
-    """
-    Initiates logger - an instance of logging object.
+    """Initiates logger - an instance of logging object.
+
     Checks whether to write to the log file or to the console (stdout)
     :param args: script arguments list.
     Process arguments: --no-console-log, --no-file-log
@@ -101,8 +101,8 @@ def init_logger(args):
 
 
 def user_rights():
-    """
-    Returns string with execution rights
+    """Returns string with execution rights
+
     :return: string "" or "sudo -u postgres"
     """
     user_rights_ = "sudo -u postgres "
@@ -113,8 +113,8 @@ def user_rights():
 
 
 def run_shell_command(command, description, show_error=True):
-    """
-    Runs the linux command and checks the output and errors
+    """Runs the linux command and checks the output and errors
+
     :param command: line of the command being executed
     :param description: description of the command being executed
     :param show_error: shows executing error in output log
@@ -134,8 +134,8 @@ def run_shell_command(command, description, show_error=True):
 
 
 def check_pg_connection(args):
-    """
-    Checks that the data directory is not equal '.', '..' or '/'
+    """Checks that the data directory is not equal '.', '..' or '/'
+
     Test connection to remote PostgreSQL (source)
     :param args: script arguments list.
     Process arguments: --data-dir, --pg-bin-dir, --backup-dir, --remote-host, --port-number, --username, -W
@@ -161,8 +161,8 @@ def check_pg_connection(args):
 
 
 def pg_service_action(args, action):
-    """
-    This function can make systemctl actions 'status', 'stop', 'start' and 'restart' and check errors
+    """This function can make systemctl actions 'status', 'stop', 'start' and 'restart' and check errors
+
     The 'status' and 'restart' actions uses for perform 'stop', 'start' actions
     An auxiliary test is performed via the PostgreSQL utility pg_isready
     :param args: script arguments list.
@@ -257,8 +257,8 @@ def pg_service_action(args, action):
 
 
 def if_pg_isready(args):
-    """
-    Checks status of PostgreSQL proccess via the utility pg_isready
+    """Checks status of PostgreSQL proccess via the utility pg_isready
+
     :param args: script arguments list.
     Process arguments: --pg-bin-dir
     :return: True if PostgreSQl is ready and False if it is not response
@@ -273,8 +273,8 @@ def if_pg_isready(args):
 
 
 def make_pg_basebackup(args):
-    """
-    Makes a copy of remote DB via pg_basebackup
+    """Makes a copy of remote DB via pg_basebackup
+    
     :param args: script arguments list.
     Process arguments: --data-dir, --pg-bin-dir, --backup-dir, --remote-host, --port-number, --username, -W, -m
     :return:
